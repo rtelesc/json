@@ -1,0 +1,23 @@
+<html>
+<script src="jquery-1.10.2.min.js"></script>
+
+<script>
+
+
+    $.ajax({
+        url: 'receive.php',
+        dataType: 'json',
+        type: 'post',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            "nome": "Rodrigo", //or $("#id").val();
+            "sobrenome": "Teles",
+        }),
+        processData: false,
+        success: function(data, status) {
+            console.log(JSON.stringify(data));
+        }
+    });
+</script>
+
+</html>
